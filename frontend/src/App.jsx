@@ -35,18 +35,19 @@ const handleQuoteSubmit = async (event) => {
   setIsSubmitting(true);
 setSubmitSuccess(false);
 
+const formData = new FormData(event.target);
 
-  const formData = new FormData(event.target);
-
-  const leadData = {
-    name: formData.get("name"),
-    phone: formData.get("phone"),
-    email: formData.get("email"),
-    businessName: formData.get("businessName"),
-    businessType: formData.get("businessType"),
-    product: formData.get("product"),
-    message: formData.get("message"),
-  };
+const leadData = {
+  name: formData.get("name"),
+  phone: formData.get("phone"),
+  email: formData.get("email"),
+  businessName: formData.get("businessName"),
+  city: formData.get("city"),
+  state: formData.get("state"),
+  businessType: formData.get("businessType"),
+  product: formData.get("product"),
+  message: formData.get("message"),
+};
 
   try {
     const response = await fetch("https://sri-mahadev-enterprises-backend.onrender.com/api/leads", {
@@ -98,14 +99,18 @@ event.target.reset();
     <a href="#home">Home</a>
     <a href="#solutions">Solutions</a>
     <a href="#products">Products</a>
-    <a href="#about">About</a>
+    <a href="#about">About us</a>
     <a href="#contact">Contact</a>
   </nav>
   
 
-  <a href="#quote" className="nav-cta">
-    Request Pricing
+  <div className="header-actions">
+  <a href="tel:+919177228888" className="call-now-btn">
+    Call Now 📞
   </a>
+
+  
+</div>
 
   <button
     className="menu-button"
@@ -352,49 +357,87 @@ event.target.reset();
 
         {/* ABOUT */}
 
-        <section id="about" className="section about">
+       <section id="about" className="section about">
+  <div className="about-container">
 
-          <div className="about-content">
+    <div className="about-heading">
+      <div className="section-label">
+        <span></span>
+        ABOUT US
+      </div>
 
-            <div className="eyebrow">
-              SRI MAHADEV ENTERPRISES
-            </div>
+      <h2>
+        Built for businesses.
+        <br />
+        Designed for growth.
+      </h2>
+    </div>
 
-            <h2>
-              Technology that
-              <br />
-              <span>works for your business.</span>
-            </h2>
+    <div className="about-content">
 
-            <p>
-              Sri Mahadev Enterprises provides POS solutions
-              for businesses looking to simplify their daily
-              operations and improve the way they manage
-              billing and business processes.
-            </p>
+      <p className="about-intro">
+        Sri Mahadev Enterprises is an authorized NukkadShops partner,
+        helping businesses access reliable POS and retail technology
+        solutions designed to simplify everyday operations.
+      </p>
 
-            <div className="about-points">
+      <p>
+        We provide professional POS solutions for kirana stores,
+        supermarkets, pharmacies, restaurants, QSRs and other growing
+        businesses. Our aim is to make billing, payments and daily
+        business operations simpler, faster and more efficient.
+      </p>
 
-              <div>
-                <strong>01</strong>
-                <span>Business-focused solutions</span>
-              </div>
+      <p>
+        Through NukkadShops, businesses can manage billing, GST-compliant
+        invoicing, inventory, payments, analytics, customer engagement
+        and online operations through an integrated retail technology
+        platform.
+      </p>
 
-              <div>
-                <strong>02</strong>
-                <span>Professional POS products</span>
-              </div>
+      <p>
+        NukkadShops was founded in 2017 and has grown into a retail
+        technology platform serving thousands of retail counters across
+        different business segments. Its solutions are designed for
+        supermarkets, kirana stores, pharmacies, restaurants, QSRs,
+        airports and other retail environments.
+      </p>
 
-              <div>
-                <strong>03</strong>
-                <span>Personalised customer support</span>
-              </div>
+    </div>
 
-            </div>
+  </div>
 
-          </div>
+  <div className="about-features">
 
-        </section>
+    <div className="about-feature">
+      <span>01</span>
+      <h3>Business-focused solutions</h3>
+      <p>
+        POS solutions designed around the needs of modern retail and
+        growing businesses.
+      </p>
+    </div>
+
+    <div className="about-feature">
+      <span>02</span>
+      <h3>Professional POS products</h3>
+      <p>
+        Access to NukkadShops POS devices including Aspire, Pro2,
+        Elite-A and NS MPOS.
+      </p>
+    </div>
+
+    <div className="about-feature">
+      <span>03</span>
+      <h3>Dedicated customer support</h3>
+      <p>
+        Helping businesses choose the right solution and get the most
+        from their POS system.
+      </p>
+    </div>
+
+  </div>
+</section>
 
 {/* =========================
     INDUSTRIES
@@ -994,6 +1037,80 @@ event.target.reset();
 
 
       <div className="form-group">
+  <label htmlFor="city">City *</label>
+
+  <select id="city" name="city" required>
+    <option value="">Select your city</option>
+    <option value="Vijayawada">Vijayawada</option>
+    <option value="Visakhapatnam">Visakhapatnam</option>
+    <option value="Guntur">Guntur</option>
+    <option value="Tirupati">Tirupati</option>
+    <option value="Nellore">Nellore</option>
+    <option value="Kurnool">Kurnool</option>
+    <option value="Rajahmundry">Rajahmundry</option>
+    <option value="Kakinada">Kakinada</option>
+    <option value="Eluru">Eluru</option>
+    <option value="Ongole">Ongole</option>
+    <option value="Machilipatnam">Machilipatnam</option>
+    <option value="Other">Other</option>
+  </select>
+</div>
+
+
+       <div className="form-group">
+  <label htmlFor="state">State / UT *</label>
+
+  <select id="state" name="state" required>
+    <option value="">Select State / UT</option>
+
+    {/* States */}
+    <option value="Andhra Pradesh">Andhra Pradesh</option>
+    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+    <option value="Assam">Assam</option>
+    <option value="Bihar">Bihar</option>
+    <option value="Chhattisgarh">Chhattisgarh</option>
+    <option value="Goa">Goa</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+    <option value="Jharkhand">Jharkhand</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Madhya Pradesh">Madhya Pradesh</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Manipur">Manipur</option>
+    <option value="Meghalaya">Meghalaya</option>
+    <option value="Mizoram">Mizoram</option>
+    <option value="Nagaland">Nagaland</option>
+    <option value="Odisha">Odisha</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Rajasthan">Rajasthan</option>
+    <option value="Sikkim">Sikkim</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Telangana">Telangana</option>
+    <option value="Tripura">Tripura</option>
+    <option value="Uttar Pradesh">Uttar Pradesh</option>
+    <option value="Uttarakhand">Uttarakhand</option>
+    <option value="West Bengal">West Bengal</option>
+
+    {/* Union Territories */}
+    <option value="Andaman and Nicobar Islands">
+      Andaman and Nicobar Islands
+    </option>
+    <option value="Chandigarh">Chandigarh</option>
+    <option value="Dadra and Nagar Haveli and Daman and Diu">
+      Dadra and Nagar Haveli and Daman and Diu
+    </option>
+    <option value="Delhi">Delhi</option>
+    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+    <option value="Ladakh">Ladakh</option>
+    <option value="Lakshadweep">Lakshadweep</option>
+    <option value="Puducherry">Puducherry</option>
+  </select>
+</div>
+
+
+      <div className="form-group">
   <label>Interested Product *</label>
 
  <select
@@ -1085,52 +1202,62 @@ event.target.reset();
 <div className="contact-grid">
 
   <div>
-    <span>PHONE</span>
-    <a href="tel:+919177228888">
-      +91 9177228888
-    </a>
-  </div>
-
-  <div>
-    <span>WHATSAPP</span>
     <a
-      href="https://wa.me/919177228888"
-      target="_blank"
-      rel="noreferrer"
-    >
-      Chat on WhatsApp
-    </a>
+  href="tel:+919177228888"
+  className="contact-card"
+>
+  <span>PHONE</span>
+  <strong>+91 9177228888</strong>
+</a>
   </div>
 
   <div>
-    <span>EMAIL</span>
-    <a href="mailto:ampol.eswar@gmail.com">
-      ampol.eswar@gmail.com
-    </a>
-  </div>
-
-  <div>
-    <span>INSTAGRAM</span>
     <a
-      href="https://www.instagram.com/sri_mahadev_developers/"
-      target="_blank"
-      rel="noreferrer"
-    >
-      Follow us on Instagram
-    </a>
+  href="https://wa.me/919177228888"
+  target="_blank"
+  rel="noreferrer"
+  className="contact-card"
+>
+  <span>WHATSAPP</span>
+  <strong>Chat on WhatsApp</strong>
+</a>
   </div>
 
   <div>
-    <span>LOCATION</span>
     <a
-      href="https://www.google.com/maps/search/?api=1&query=Dwarakamai+Rallapalli+Nilayam+Ramavarappadu+Vijayawada+Andhra+Pradesh+521108"
-      target="_blank"
-      rel="noreferrer"
-    >
-      Dwarakamai Rallapalli Nilayam,
-      Ramavarappadu, Vijayawada,
-      Andhra Pradesh – 521108
-    </a>
+  href="mailto:ampol.eswar@gmail.com"
+  className="contact-card"
+>
+  <span>EMAIL</span>
+  <strong>ampol.eswar@gmail.com</strong>
+</a>
+  </div>
+
+  <div>
+    <a
+  href="YOUR_INSTAGRAM_LINK"
+  target="_blank"
+  rel="noreferrer"
+  className="contact-card"
+>
+  <span>INSTAGRAM</span>
+  <strong>Follow us on Instagram</strong>
+</a>
+  </div>
+
+  <div>
+    <a
+  href="YOUR_GOOGLE_MAPS_LINK"
+  target="_blank"
+  rel="noreferrer"
+  className="contact-card"
+>
+  <span>LOCATION</span>
+  <strong>
+    Dwarakamai Rallapalli Nilayam,<br />
+    Ramavarappadu, Vijayawada, Andhra Pradesh – 521108
+  </strong>
+</a>
   </div>
 
 </div>
@@ -1283,7 +1410,7 @@ event.target.reset();
 {/* FLOATING WHATSAPP */}
 
 <a
-  href="https://wa.me/919177228888"
+  href="https://wa.me/919177228888?text=Hi%2C%20I'm%20interested%20in%20NukkadShops%20POS%20solutions."
   className="whatsapp-float"
   target="_blank"
   rel="noreferrer"
