@@ -94,6 +94,7 @@ event.target.reset();
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
+  
 
   <a href="#quote" className="nav-cta">
     Request Pricing
@@ -1060,6 +1061,8 @@ event.target.reset();
   </p>
 
 </div>
+<section id="contact" className="section contact">
+
 
 
 <div className="contact-grid">
@@ -1114,7 +1117,7 @@ event.target.reset();
   </div>
 
 </div>
-
+</section>
       </main>
 
      {/* YOUTUBE VIDEO MODAL */}
