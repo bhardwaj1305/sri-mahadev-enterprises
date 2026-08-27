@@ -84,7 +84,7 @@ event.target.reset();
       <header className="navbar">
   <div className="brand">
     <span>SRI MAHADEV ENTERPRISES</span>
-    <small>AUTHORIZED</small>
+    <small>AUTHORIZED DEALER</small>
     <div className="logo">
   <img
     src="/nukkadshops-logo.png"
@@ -1310,7 +1310,8 @@ event.target.reset();
     <div className="footer-brand">
       <div className="brand">
         <span>SRI MAHADEV ENTERPRISES</span>
-        <small>AUTHORIZED NUKKAD SHOPS</small>
+        <small>AUTHORIZED DEALER-NUKKAD SHOPS<sup>®</sup></small>
+        
       </div>
        <div className="gstin">
     GSTIN: 37AUDPA3775B1Z0
