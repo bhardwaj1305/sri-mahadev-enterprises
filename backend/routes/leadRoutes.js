@@ -20,6 +20,8 @@ router.post("/", async (req, res) => {
         <p><strong>Phone:</strong> ${lead.phone}</p>
         <p><strong>Email:</strong> ${lead.email}</p>
         <p><strong>Business Name:</strong> ${lead.businessName || "Not provided"}</p>
+        <p><strong>City:</strong> ${lead.city || "Not provided"}</p>
+        <p><strong>State:</strong> ${lead.state || "Not provided"}</p>
         <p><strong>Business Type:</strong> ${lead.businessType || "Not provided"}</p>
         <p><strong>Product:</strong> ${lead.product || "Not specified"}</p>
         <p><strong>Message:</strong> ${lead.message || "No message"}</p>
@@ -38,7 +40,7 @@ router.post("/", async (req, res) => {
 
     // Send confirmation email to customer
 await resend.emails.send({
-  from: "Sri Mahadev Enterprises <onboarding@resend.dev>",
+  from: "Sri Mahadev Enterprises <noreply@srimahadeventerprises.com>",
   to: [lead.email],
   subject: "Thank you for contacting Sri Mahadev Enterprises",
   html: `
