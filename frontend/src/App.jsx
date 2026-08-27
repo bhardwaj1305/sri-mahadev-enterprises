@@ -83,8 +83,8 @@ event.target.reset();
       {/* NAVBAR */}
       <header className="navbar">
   <div className="brand">
-    <span>SRI MAHADEV</span>
-    <small>ENTERPRISES</small>
+    <span>SRI MAHADEV ENTERPRISES</span>
+    <small>AUTHORIZED NUKKAD SHOPS</small>
   </div>
 
   <nav className="nav-links">
@@ -1302,9 +1302,12 @@ event.target.reset();
 
     <div className="footer-brand">
       <div className="brand">
-        <span>SRI MAHADEV</span>
-        <small>ENTERPRISES</small>
+        <span>SRI MAHADEV ENTERPRISES</span>
+        <small>AUTHORIZED NUKKAD SHOPS</small>
       </div>
+       <div className="gstin">
+    GSTIN: 37AUDPA3775B1Z0
+  </div>
 
       <p>
         Smart POS solutions for modern retail,
@@ -1327,7 +1330,9 @@ event.target.reset();
         >
           Instagram
         </a>
+       
       </div>
+      
     </div>
 
 
