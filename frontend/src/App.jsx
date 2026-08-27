@@ -49,7 +49,7 @@ setSubmitSuccess(false);
   };
 
   try {
-    const response = await fetch("https://sri-mahadev-enterprises-backend.onrender.com", {
+    const response = await fetch("https://sri-mahadev-enterprises-backend.onrender.com/api/leads", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
