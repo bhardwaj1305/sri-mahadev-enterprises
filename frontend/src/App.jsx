@@ -84,7 +84,14 @@ event.target.reset();
       <header className="navbar">
   <div className="brand">
     <span>SRI MAHADEV ENTERPRISES</span>
-    <small>AUTHORIZED NUKKAD SHOPS</small>
+    <small>AUTHORIZED</small>
+    <div className="logo">
+  <img
+    src="/nukkadshops-logo.png"
+    alt="NukkadShops"
+    className="nukkadshops-logo"
+  />
+</div>
   </div>
 
   <nav className="nav-links">
