@@ -877,22 +877,32 @@ event.target.reset();
       contact you with pricing and product details.
     </p>
 
-    <div className="quote-contact-info">
-      <div>
-        <strong>📞</strong>
-        <span>+91 9177228888</span>
-      </div>
+   <div className="quote-contact-info">
+  <div>
+    <strong>📞</strong>
+    <a href="tel:+919177228888">
+      +91 9177228888
+    </a>
+  </div>
 
-      <div>
-        <strong>✉</strong>
-        <span>ampol.eswar@gmail.com</span>
-      </div>
+  <div>
+    <strong>✉</strong>
+    <a href="mailto:ampol.eswar@gmail.com">
+      ampol.eswar@gmail.com
+    </a>
+  </div>
 
-      <div>
-        <strong>💬</strong>
-        <span>WhatsApp Available</span>
-      </div>
-    </div>
+  <div>
+    <strong>💬</strong>
+    <a
+      href="https://wa.me/919177228888"
+      target="_blank"
+      rel="noreferrer"
+    >
+      WhatsApp Available
+    </a>
+  </div>
+</div>
 
   </div>
 
