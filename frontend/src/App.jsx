@@ -1,7 +1,7 @@
-import posAction from "./assets/visuals/pos-action.png";
-import aspire from "./assets/products/aspire_4k.png";
-import mpos from "./assets/products/mpos_4k.png";
-import pro from "./assets/products/pro_4k.png";
+import posAction from "./assets/visuals/pos-action.webp";
+import aspire from "./assets/products/aspire_4k.webp";
+import mpos from "./assets/products/mpos_4k.webp";
+import pro from "./assets/products/pro_4k.webp";
 import { useState } from "react";
 import products from "./data/products";
 import "./App.css";

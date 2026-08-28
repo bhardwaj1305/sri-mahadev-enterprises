@@ -1,7 +1,7 @@
-import aspire from "../assets/products/aspire_4k.png";
-import pro from "../assets/products/pro_4k.png";
-import eliteA from "../assets/products/elite-a_4k.png";
-import mpos from "../assets/products/mpos_4k.png";
+import aspire from "../assets/products/aspire_4k.webp";
+import pro from "../assets/products/pro_4k.webp";
+import eliteA from "../assets/products/elite-a_4k.webp";
+import mpos from "../assets/products/mpos_4k.webp";
 
 const products = [
   {
