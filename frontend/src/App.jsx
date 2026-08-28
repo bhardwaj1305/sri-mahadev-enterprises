@@ -9,7 +9,6 @@ import "./App.css";
 
 function App() {
   
-  const [selectedReviewVideo, setSelectedReviewVideo] = useState(null);
   const [showVideo, setShowVideo] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
