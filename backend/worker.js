@@ -1,22 +1,29 @@
-import express from "express";
-import { httpServerHandler } from "cloudflare:node";
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
 
-const app = express();
+    // Health check
+    if (request.method === "GET" && url.pathname === "/") {
+      return Response.json({
+        success: true,
+        message: "Sri Mahadev Enterprises API is running",
+      });
+    }
 
-app.use(express.json());
+    // Test leads endpoint
+    if (request.method === "GET" && url.pathname === "/api/leads") {
+      return Response.json({
+        success: true,
+        message: "Leads API is working",
+      });
+    }
 
-app.get("/", (req, res) => {
-  res.json({
-    message: "Sri Mahadev Enterprises API is running",
-  });
-});
-
-app.get("/api/leads", (req, res) => {
-  res.json({
-    message: "Leads API is working",
-  });
-});
-
-app.listen(3000);
-
-export default httpServerHandler({ port: 3000 });
+    return Response.json(
+      {
+        success: false,
+        message: "Route not found",
+      },
+      { status: 404 }
+    );
+  },
+};
