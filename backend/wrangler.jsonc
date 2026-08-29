@@ -1,0 +1,6 @@
+{
+  "name": "sri-mahadev-enterprises-backend",
+  "main": "worker.js",
+  "compatibility_date": "2026-08-29",
+  "compatibility_flags": ["nodejs_compat"]
+}
