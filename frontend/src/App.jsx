@@ -37,8 +37,8 @@ const leadData = {
 };
 
   try {
-    const response = await fetch("https://sri-mahadev-enterprises-backend.onrender.com/api/leads", {
-      method: "POST",
+const response = await fetch("https://sri-mahadev-enterprises-backend.uandme1305.workers.dev/api/leads", {
+        method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
