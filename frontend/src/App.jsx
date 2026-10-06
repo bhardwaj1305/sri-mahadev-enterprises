@@ -797,20 +797,7 @@ event.target.reset();
 </a>
   </div>
 
-  <div>
-    <a
-  href="YOUR_GOOGLE_MAPS_LINK"
-  target="_blank"
-  rel="noreferrer"
-  className="contact-card"
->
-  <span>LOCATION</span>
-  <strong>
-    Dwarakamai Rallapalli Nilayam,<br />
-    Ramavarappadu, Vijayawada, Andhra Pradesh – 521108
-  </strong>
-</a>
-  </div>
+  
 
 </div>
 </section>
